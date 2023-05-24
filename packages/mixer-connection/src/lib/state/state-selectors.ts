@@ -182,7 +182,8 @@ export const selectParametricEqValue: Selector<number> = (
       case 'i':
       case 'l':
       case 'p':
-      case 's': {
+      case 's': 
+      default: {
         const path = joinStatePath(channelType, channel - 1, 'eq', `b${band}`, key);
         return state => getValueFromObject<number>(state, path);
       }
