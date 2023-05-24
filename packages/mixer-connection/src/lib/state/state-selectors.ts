@@ -1,6 +1,6 @@
 import { distinctUntilChanged, filter, map, OperatorFunction, pipe } from 'rxjs';
 
-import { ChannelType, BusType } from '../types';
+import { ChannelType, BusType, ParametricEqKey } from '../types';
 import { getValueFromObject, joinStatePath } from '../utils/state-utils';
 
 type Projector<T> = (state: unknown) => T;
@@ -161,6 +161,35 @@ export const selectFaderValue: Selector<number> = (
     }
   }
 };
+
+/**
+ * Select eq values of a channel
+ * @param channelType
+ * @param channel
+ * @param band
+ * @param key
+ */
+export const selectParametricEqValue: Selector<number> = (
+  channelType: ChannelType,
+  channel: number,
+  band: number,
+  key: ParametricEqKey,
+) => {
+  {
+    switch (channelType) {
+      case 'i':
+      case 'f':
+      case 'i':
+      case 'l':
+      case 'p':
+      case 's': {
+        const path = joinStatePath(channelType, channel - 1, 'eq', `b${band}`, key);
+        return state => getValueFromObject<number>(state, path);
+      }
+    }
+  }
+};
+
 
 /**
  * Select delay value of a master channel in ms

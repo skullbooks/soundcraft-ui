@@ -4,15 +4,15 @@
   "version": "2.0.1",
   "type": "commonjs",
   "license": "MIT",
-  "author": "Ferdinand Malcher <ferdinand@malcher.media>",
+  "author": "Ferdinand Malcher <ferdinand@malcher.media> & Jan-Victor Krille <jan-victor.krille@leemomedia.de>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fmalcher/soundcraft-ui.git"
+    "url": "https://github.com/skullbooks/soundcraft-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/fmalcher/soundcraft-ui/issues"
+    "url": "https://github.com/skullbooks/soundcraft-ui/issues"
   },
-  "homepage": "https://github.com/fmalcher/soundcraft-ui/tree/main/packages/mixer-connection",
+  "homepage": "https://github.com/skullbooks/soundcraft-ui/tree/main/packages/mixer-connection",
   "keywords": [
     "Soundcraft Ui",
     "Mixer control",
