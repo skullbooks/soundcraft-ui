@@ -1,6 +1,12 @@
 export type ChannelType = 'i' | 'l' | 'p' | 'f' | 's' | 'a' | 'v';
 export type BusType = 'master' | 'aux' | 'fx';
 
+export enum ParametricEqKey { 
+  Frequency = 'freq',
+  Gain = 'gain',
+  Q = 'q'
+};
+
 export enum ConnectionStatus {
   Opening = 'OPENING',
   Open = 'OPEN',
